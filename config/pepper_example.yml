@@ -1,0 +1,31 @@
+crop_name: "Pepper"
+experiment_id: "PA-RPC-25C-DA-PM"
+
+data:
+  metrics_file: "data/examples/pepper_metrics.csv"
+  counts_file: "data/examples/pepper_counts.csv"
+  id_column: "Label"
+  count_id_column: "Batch"
+
+descriptors:
+  - "Gmax"
+  - "t50germ"
+  - "AUC"
+  - "uniformity"
+  - "b (slope)"
+
+pca:
+  variance_threshold: 0.90
+  center: true
+  scale: true
+
+kennard_stone:
+  n_samples: 30
+  metric: "mahal"
+
+plots:
+  pca_plot: true
+  density_plots: true
+  germination_curves: true
+  save_png: true
+  dpi: 300
